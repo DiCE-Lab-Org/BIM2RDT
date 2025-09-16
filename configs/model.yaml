@@ -1,0 +1,22 @@
+# Choose one 'weights' option:
+# Text/visual prompted: yoloe-11{s|m|l}-seg.pt
+# Prompt-free (large-vocab, no prompts): yoloe-11{s|m|l}-seg-pf.pt
+
+# weights: python/yoloe-11s-seg-pf.pt  # Small prompt-free model
+# weights: python/yoloe-11m-seg-pf.pt  # Medium prompt-free model
+# weights: python/yoloe-11l-seg-pf.pt  # Large prompt-free model
+weights: python\yoloe-11s-seg.pt  # Small prompted model
+# weights: python\yoloe-11m-seg.pt  # Medium prompted model
+# weights: python\yoloe-11l-seg.pt  # Large prompted model
+
+# Runtime
+device: cuda:0                # "cpu" if no GPU
+imgsz: 640                    # 640/960/1280; balance speed vs accuracy
+conf: 0.30                    # confidence threshold
+iou: 0.50                     # NMS IoU
+prompt_mode: "text"           # USE THIS FOR PROMPTED MODELS: Use text prompt (classes listed in prompts.yaml)
+# prompt_mode: "prompt_free"  # USE THIS FOR PROMPT-FREE MODELS: No prompt, true OVD
+# source: 0                   # 0=webcam; or path/to/video.mp4 (not in use, Unity is input source)
+tcp_host: 127.0.0.1
+tcp_port: 5555
+# send_masks: false           # true if you want instance masks later
