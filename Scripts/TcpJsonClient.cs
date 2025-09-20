@@ -1,3 +1,4 @@
+// This file must be placed in [Unity Project]/Assets/Scripts for detection to work
 using System;
 using System.Collections.Concurrent;
 using System.IO;

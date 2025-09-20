@@ -116,7 +116,11 @@ public class OpenCVCornersXYZOverlay : MonoBehaviour
         if (_rt) Destroy(_rt);
         if (_tex) Destroy(_tex);
 
-        _rt = new RenderTexture(w, h, 0, RenderTextureFormat.ARGB32) { antiAliasing = 1 };
+        // Ensure the RT has a depth-stencil buffer (required by URP/HDRP RenderGraph).
+        // Use a 24-bit depth buffer so Camera.Render() is valid.
+        _rt = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32) { antiAliasing = 1 };
+        // Optionally: _rt.Create();
+
         _tex = new Texture2D(w, h, TextureFormat.RGBA32, false);
 
         EnsureMatsMatchTexture(w, h);

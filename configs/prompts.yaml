@@ -1,33 +1,9 @@
 # Likely will not be using this config
 text:
-  - person
-  - ladder
-  - drill
-  - hammer
-  - hard hat
-  - safety vest
-  - excavator
-  - forklift
-  - fire extinguisher
-  - pipe
-  - conduit
-  - rebar
-  - beam
-  - column
-  - door
-  - window
-  - outlet
-  - light fixture
-  - traffic cone
-  - tripod
-  - barrel
-  - barrier
-  - wooden crate
-  - shipping container
-  - concrete block
-  - wooden pallet
-  - scaffolding
-  - concrete bag
-  - cinder block
-
+- cone
+- barrel
+- scaffolding
+- woodenpallet
+- tripod
+- barrier
 

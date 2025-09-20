@@ -1,3 +1,4 @@
+// This file must be placed in [Unity Project]/Assets/Scripts for detection to work
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,7 +6,9 @@ using UnityEngine.UI;
 public class DetectionOverlay : MonoBehaviour {
   // ←← IMPORTANT: drag the UI panel (RawImage) that shows MainCam_RT into this slot in the Inspector.
   public RawImage TargetImage;
-
+  public System.Collections.Generic.IReadOnlyList<Detection> LastDetections => _last;
+  public int ImageWidth  => _imgW;
+  public int ImageHeight => _imgH;
   // internal state
   List<Detection> _last = new();
   int _imgW = 640, _imgH = 640;

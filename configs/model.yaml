@@ -5,9 +5,9 @@
 # weights: python/yoloe-11s-seg-pf.pt  # Small prompt-free model
 # weights: python/yoloe-11m-seg-pf.pt  # Medium prompt-free model
 # weights: python/yoloe-11l-seg-pf.pt  # Large prompt-free model
-weights: python\yoloe-11s-seg.pt  # Small prompted model
+# weights: python\yoloe-11s-seg.pt  # Small prompted model
 # weights: python\yoloe-11m-seg.pt  # Medium prompted model
-# weights: python\yoloe-11l-seg.pt  # Large prompted model
+weights: python\yoloe-11l-seg.pt  # Large prompted model
 
 # Runtime
 device: cuda:0                # "cpu" if no GPU
